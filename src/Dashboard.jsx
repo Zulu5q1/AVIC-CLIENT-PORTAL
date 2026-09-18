@@ -3,6 +3,7 @@ import { stats } from "./data/MockData";
 import { ShipmentCard } from "./components/ShipmentCard";
 import { Shipments } from './data/MockData';
 import { useState } from "react";
+import { Link } from 'react-router'
 
 const Dashboard = () => {
     const [selectedShipment, setSelectedShipment] = useState(null);
@@ -17,12 +18,13 @@ const Dashboard = () => {
             <div className= " bg-blue-900 p-4 rounded-md mb-4">
                 <p className=" font-bold text-lg text-white">Recent Shipments</p>
                 <hr className= "border border-yellow-300 my-6 mb-10"/>
-                {Shipments.map((shipment, index) => (
+                {Shipments.slice(0,3).map((shipment, index) => (
                     <div className= " mt-2  items-center" key={index}>
                         <ShipmentCard key={index} shipment={shipment} 
                         onClick={() => setSelectedShipment(shipment)} />
                     </div>
                 ))}
+                <Link to='/shipments' className="text-yellow-300 underline text-right w-full">View Full Shipments</Link>
             </div>
             {
                 selectedShipment && selectedShipment != null ? (

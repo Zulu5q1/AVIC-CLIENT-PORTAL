@@ -37,5 +37,35 @@ export const Shipments = [
         weight: "50kg",
         service:"Cargo",
         eta: "10 days" 
+    },
+    { 
+        id: "AV-004", 
+        location: "Lagos", 
+        destination: "Abidjan", 
+        status: "In Transit",
+        customer: "Daniel Ibogun",
+        weight: "17kg",
+        service:"Van Freight",
+        eta: "4 days" 
+    },
+    { 
+        id: "AV-005", 
+        location: "London", 
+        destination: "USA", 
+        status: "Processing",
+        customer: "Jonathan Henry",
+        weight: "60kg",
+        service:"Air Freight",
+        eta: "9 days" 
+    },
+    { 
+        id: "AV-006", 
+        location: "Ijebu", 
+        destination: "Canadi", 
+        status: "Delivered",
+        customer: "Musa Aboki",
+        weight: "20kg",
+        service:"Cargo",
+        eta: "14 days" 
     }
 ]
