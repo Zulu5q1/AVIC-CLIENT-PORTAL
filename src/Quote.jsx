@@ -1,43 +1,53 @@
 import SideNav from "./SideNav";
+import { useNavigate } from "react-router";
 
 
 const Quote = () => {
+    const navigate = useNavigate();
+
+    const handleFormSubmit = (formData) => {
+        //gather data
+        const formFields= Object.fromEntries(formData)
+
+        navigate('/summary', {state: formFields})
+    }
+
     return <div className="flex">
         <SideNav/>
         <div className="m-4 justify-center flex items-center w-300">
-            <form className=" w-200 flex flex-col gap-3">
+            <form action={handleFormSubmit} className=" w-200 flex flex-col gap-3">
                 <label className=" flex flex-col font-bold text-yellow-300" >
                     Full Name:
-                    <input placeholder="Full Name" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Full Name" name="name" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Company Name:
-                    <input placeholder="Company (optional)" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Company (optional)" name="company" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Email:
-                    <input placeholder="Email" type="email" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Email" type="email" name="email" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Phone Number:
-                    <input placeholder="Phone" type="number"  className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Phone" type="number" name="phone"  className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Origin:
-                    <input placeholder="Origin" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Origin" name="origin" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Destination:
-                    <input placeholder="Destination" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Destination" name="destination" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Weight:
-                    <input placeholder="Weight (kg)" type="number" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input placeholder="Weight (kg)" name="weight" type="number" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <div className="flex">
                     <label className="flex flex-col w-1/2 font-bold text-yellow-300" >
                         Shipment Type:
-                        <select className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" >
+                        <select className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" name="shipment" >
                             <option value="" disabled>--- Choose a Type ---</option>
                             <option value="sea">Sea</option>
                             <option value="air">Air</option>
@@ -48,7 +58,7 @@ const Quote = () => {
                     
                     <label className="flex flex-col w-1/2 font-bold text-yellow-300" >
                         Service:
-                        <select className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" >
+                        <select className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" name="service" >
                             <option value="" disabled>--- Choose a Service ---</option>
                             <option value="standard">Standard</option>
                             <option value="express">Express</option>
@@ -60,7 +70,7 @@ const Quote = () => {
                 
                 <label className="flex flex-col font-bold text-yellow-300" >
                     Additional Message:
-                    <textarea placeholder="Message" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <textarea placeholder="Message" name="text" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 
                 <button type="submit" className="bg-yellow-300 p-3 text-blue-950 font-bold text-lg rounded-lg">Request Quote</button>

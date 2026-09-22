@@ -3,6 +3,7 @@ import DashboardPage from './DashboardPage.jsx';
 import ShipmentsPage from './ShipmentsPage.jsx'
 import NotFound from './NotFound.jsx'
 import Quote from './Quote.jsx'
+import Summary from './Summary.jsx'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: '/quote',
     element:<Quote/>
+  },
+  {
+    path: '/summary',
+    element: <Summary/>
   },
   {
     path:'*',
