@@ -1,9 +1,10 @@
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DashboardPage from './DashboardPage.jsx';
 import ShipmentsPage from './ShipmentsPage.jsx'
 import NotFound from './NotFound.jsx'
 import Quote from './Quote.jsx'
 import Summary from './Summary.jsx'
+import SuccessPage from './SuccessPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: '/summary',
     element: <Summary/>
+  },
+  {
+    path: '/success',
+    element: <SuccessPage/>
   },
   {
     path:'*',

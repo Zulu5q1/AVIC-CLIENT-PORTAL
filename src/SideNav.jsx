@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
  
 const SideNav = () => {
     const activeStyle = "border-l-3 px-1"

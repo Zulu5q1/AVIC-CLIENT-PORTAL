@@ -25,7 +25,7 @@ const ShipmentsPage= () => {
             <hr className="my-8 border-gray-300"/>
             <div className="">
                 {Shipments.map((shipment, index) => (
-                    <div className="mt-2 items-center">
+                    <div key={index} className="mt-2 items-center">
                         <ShipmentCard key={index} shipment={shipment}/>
                     </div>
                 ))}
