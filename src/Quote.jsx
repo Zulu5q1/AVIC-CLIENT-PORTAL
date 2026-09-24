@@ -77,7 +77,7 @@ const Quote = () => {
                     <textarea required defaultValue={savedData.text  || ""} placeholder="Message" name="text" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 
-                <button type="submit" className="bg-yellow-300 p-3 text-blue-950 font-bold text-lg rounded-lg">Request Quote</button>
+                <button type="submit" className="bg-yellow-300 p-3 text-blue-950 font-bold text-lg rounded-lg hover:cursor-pointer">Request Quote</button>
             </form>
         </div>
     </div>

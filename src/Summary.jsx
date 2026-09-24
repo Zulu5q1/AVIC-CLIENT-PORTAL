@@ -26,7 +26,7 @@ const Summary = () => {
 
     validUntil.setDate(currentDate.getDate() + 30)
 
-
+    
     
 
     
@@ -96,7 +96,10 @@ const Summary = () => {
                     
 
                 </div>
-                <Link to="/quote" state={formData} className="text-center text-white bg-yellow-300 p-2 font-bold rounded-md ">Go back to Form</Link>
+                <div className="flex justify-around w-full items-center">
+                    <Link to="/quote" state={formData} className="text-center text-white bg-yellow-300 p-2 font-bold rounded-md ">Go back to Form</Link>
+                    <Link to="/success" state={{ Num : ranNum}} className="text-center text-white bg-yellow-300 p-2 font-bold rounded-md ">Submit Quote</Link>
+                </div>
             </div>
             
         </div>
