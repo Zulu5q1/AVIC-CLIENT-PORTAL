@@ -69,3 +69,22 @@ export const Shipments = [
         eta: "14 days" 
     }
 ]
+
+
+
+export const Notifications = [
+    {
+        id: 1,
+        title: "Quote Submitted",
+        message: "AVQ-2026-001 is awaiting review.",
+        time: "2 mins ago",
+        unread: true
+    },
+    {
+        id: 2,
+        title: "Shipment Update",
+        message: "AV-001 is now In Transit.",
+        time: "1 hour ago",
+        unread: false
+    }
+]
