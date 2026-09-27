@@ -48,10 +48,10 @@ import { useState } from 'react';
         <div className=" w-full m-6">
             <div className=" justify-between flex items-center ">
                 <div>
-                    <button onClick={() => setButton("")} className={`p-2 rounded-full px-4 bg-white font-medium shadow-sm m-2`}>All</button>
-                    <button onClick={() => setButton("Delivered")} className="p-2 rounded-full px-4 bg-white font-medium shadow-sm m-2">Delivered</button>
-                    <button onClick={() => setButton("In Transit")} className="p-2 rounded-full px-4 bg-white font-medium shadow-sm m-2">In Transit</button>
-                    <button onClick={() => setButton("Processing")} className="p-2 rounded-full px-4 bg-white font-medium shadow-sm m-2">Processing</button>
+                    <button onClick={() => setButton("")} className={`p-2 ${button === "" ? "bg-blue-950 text-yellow-300" : "bg-white text-blue-950"} rounded-full px-4 font-medium shadow-sm m-2`}>All</button>
+                    <button onClick={() => setButton("Delivered")} className={`p-2 ${button === "Delivered" ? "bg-blue-950 text-yellow-300" : "bg-white text-blue-950"} rounded-full px-4 font-medium shadow-sm m-2`}>Delivered</button>
+                    <button onClick={() => setButton("In Transit")} className={`p-2 ${button === "In Transit" ? "bg-blue-950 text-yellow-300" : "bg-white text-blue-950"} rounded-full px-4 font-medium shadow-sm m-2`}>In Transit</button>
+                    <button onClick={() => setButton("Processing")} className={`p-2 ${button === "Processing" ? "bg-blue-950 text-yellow-300" : "bg-white text-blue-950"} rounded-full px-4 font-medium shadow-sm m-2`}>Processing</button>
                 </div>
                 <form className="bg-blue-900 text-white flex items-center p-2 px-4 rounded-full">
                     <MagnifyingGlassIcon className=" h-5 w-5 text-yellow-300"/>

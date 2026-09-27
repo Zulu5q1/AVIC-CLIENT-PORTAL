@@ -61,7 +61,7 @@ export const Shipments = [
     { 
         id: "AV-006", 
         location: "Ijebu", 
-        destination: "Canadi", 
+        destination: "Canada", 
         status: "Delivered",
         customer: "Musa Aboki",
         weight: "20kg",
