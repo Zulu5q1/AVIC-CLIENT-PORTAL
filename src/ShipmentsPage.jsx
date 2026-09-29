@@ -1,7 +1,7 @@
 import SideNav from './SideNav';
 import  {ShipmentCard}  from './components/ShipmentCard';
 import  {Shipments}  from './data/MockData';
-import { MagnifyingGlassIcon } from '@heroicons/react/20/solid';
+import { MagnifyingGlassIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/20/solid';
 import { useState } from 'react';
 
 
@@ -23,6 +23,7 @@ import { useState } from 'react';
     const ShipmentsPage= () => {
     const [search, setSearch] = useState("")
     const [button , setButton] = useState("")
+    const [isOpen, setIsOpen] = useState(false)
 
 
     const filtered = Shipments.filter((shipment) => {
@@ -47,13 +48,22 @@ import { useState } from 'react';
         <SideNav/>
         <div className=" w-full m-6">
             <div className=" justify-between flex items-center ">
-                <div>
+                <div className="block md:hidden relative">
+                    <AdjustmentsHorizontalIcon onClick={() => setIsOpen(!isOpen)} className="h-10 w-10 text-yellow-300 mr-10"/>
+                    {isOpen && <div className="absolute bg-[#ffb300] rounded-md flex flex-col z-50">
+                        <button onClick={() => {setButton(""); setIsOpen(!isOpen)}} className={`p-2 ${button === "" ? " text-white bg-[#001f4d]" : "text-[#001f4d]"} rounded-full px-4 font-medium shadow-sm m-2`}>All</button>
+                        <button onClick={() => {setButton("Delivered"); setIsOpen(!isOpen)}} className={`p-2 ${button === "Delivered" ? " text-white bg-[#001f4d]" : "text-[#001f4d]"} rounded-full px-4 font-medium shadow-sm m-2`}>Delivered</button>
+                        <button onClick={() => {setButton("In Transit"); setIsOpen(!isOpen)}} className={`p-2 ${button === "In Transit" ? " text-white bg-[#001f4d]" : "text-[#001f4d]"} rounded-full px-4 font-medium shadow-sm m-2`}>In Transit</button>
+                        <button onClick={() => {setButton("Processing"); setIsOpen(!isOpen)}} className={`p-2 ${button === "Processing" ? " text-white bg-[#001f4d]" : "text-[#001f4d]"} rounded-full px-4 font-medium shadow-sm m-2`}>Processing</button>
+                    </div>}
+                </div>
+                <div className="hidden md:block">
                     <button onClick={() => setButton("")} className={`p-2 ${button === "" ? " text-[#001f4d] bg-[#ffb300]" : "text-[#ffb300] border"} rounded-full px-4 font-medium shadow-sm m-2`}>All</button>
                     <button onClick={() => setButton("Delivered")} className={`p-2 ${button === "Delivered" ? " text-[#001f4d] bg-[#ffb300]" : "text-[#ffb300] border"} rounded-full px-4 font-medium shadow-sm m-2`}>Delivered</button>
                     <button onClick={() => setButton("In Transit")} className={`p-2 ${button === "In Transit" ? " text-[#001f4d] bg-[#ffb300]" : "text-[#ffb300] border"} rounded-full px-4 font-medium shadow-sm m-2`}>In Transit</button>
                     <button onClick={() => setButton("Processing")} className={`p-2 ${button === "Processing" ? " text-[#001f4d] bg-[#ffb300]" : "text-[#ffb300] border"} rounded-full px-4 font-medium shadow-sm m-2`}>Processing</button>
                 </div>
-                <form className="bg-blue-900 text-white flex items-center p-2 px-4 rounded-full">
+                <form className="min-w-50 bg-blue-900 text-white flex items-center p-2 px-4 rounded-full">
                     <MagnifyingGlassIcon className=" h-5 w-5 text-yellow-300"/>
                     <input value={search} onChange={(e) => setSearch(e.target.value)} className=" outline-none  w-full  placeholder:text-white px-2" id="Search" type="text" placeholder="Search..."/>
                     {/* <button type="submit">Search</button> */}

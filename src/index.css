@@ -3,4 +3,5 @@
 
 body, html {
     background-color: #001f4d;
+    min-width: 375px
 }
