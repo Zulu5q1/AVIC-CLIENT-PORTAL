@@ -18,7 +18,7 @@ const Support=() => {
         {
             alert && (
                 <div>
-                    <div className=" backdrop-blur-md text-white transform -translate-x-1/2 -translate-y-1/2 bg-linear-to-t from-[#001f4d] to-[#ffb300] text-lg font-bold flex items-center p-15 shadow-md justify-between absolute top-1/2 left-1/2">
+                    <div className="z-50 backdrop-blur-md text-white transform -translate-x-1/2 -translate-y-1/2 bg-linear-to-t from-[#001f4d] to-[#ffb300] text-lg font-bold flex items-center p-15 shadow-md justify-between absolute top-1/2 left-1/2">
                         <span>Support request successfully submitted</span>
                         <button className=" bg-blue-300 px-3 py-1 rounded-full border-none cursor-pointer ml-2" onClick={() => setAlert(false)}> &times; </button>
                     </div>
@@ -38,7 +38,7 @@ const Support=() => {
                     </label>
                     <label className="flex  flex-col font-bold text-xl text-[#ffb300]">
                         Details:
-                        <textarea required className="text-base text-[#001f4d] bg-white h-80 outline-none rounded-md my-3 p-2" name='body'placeholder='Explain the color of your problem . . .'/>
+                        <textarea required className="text-base text-[#001f4d] bg-white h-80 outline-none rounded-md my-3 p-2" name='body'placeholder='Describe your problem . . .'/>
                     </label>
                 </div>
                 <div className=" w-[70%] text-end">
