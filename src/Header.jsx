@@ -28,7 +28,7 @@ const Header = () => {
             {isOpen && (<div className=" absolute right-2 mt-2 w-80 bg-[#001f4d] shadow-yellow-300 rounded-lg shadow z-50 
                             before:content-[''] 
                             before:absolute before:bottom-full before:right-5 
-                            before:border-[8px] before:border-transparent before:border-b-[#ffb300]">
+                            before:border-8 before:border-transparent before:border-b-[#ffb300]">
                 {Notifications.map((notify ) => (
                     <NotificationCard notification={notify} key={notify.id} />
                 ))}
