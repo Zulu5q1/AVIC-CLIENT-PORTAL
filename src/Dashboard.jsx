@@ -7,23 +7,23 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
     const [selectedShipment, setSelectedShipment] = useState(null);
-    return <div className= "flex flex-col gap-4 p-4">
+    return <div className= "flex flex-col gap-4 p-4  bg-linear-to-t from-[#001f4d] to-white">
         <div className= "flex gap-4">
             {stats.map((stat, index) => (
                 <StatCard key={index} title={stat.title} value={stat.value} />
             ))}
         </div>
         <div className= "flex gap-4 flex-wrap ">
-            <div className= " bg-blue-900 p-4 rounded-md mb-4">
+            <div className= " bg-[#001f4d] p-4 rounded-md mb-4">
                 <p className=" font-bold text-lg text-white">Recent Shipments</p>
-                <hr className= "border border-yellow-300 my-6 mb-10"/>
+                <hr className= "border border-[#ffb300] my-6 mb-10"/>
                 {Shipments.slice(0,3).map((shipment, index) => (
                     <div className= " mt-2  items-center" key={index}>
                         <ShipmentCard key={index} shipment={shipment} 
                         onClick={() => setSelectedShipment(shipment)} />
                     </div>
                 ))}
-                <Link to='/shipments' className="text-yellow-300 underline text-right w-full">View Full Shipments</Link>
+                <Link to='/shipments' className="text-[#ffb300] underline text-right w-full">View Full Shipments</Link>
             </div>
             {
                 selectedShipment && selectedShipment != null ? (
@@ -68,7 +68,7 @@ const Dashboard = () => {
                             
                         </div>
                         
-                        <button className="hover:cursor-pointer w-full font-bold bg-blue-500 text-white px-4 py-2 rounded-md mt-4" onClick={() => setSelectedShipment(null)}>Close</button>
+                        <button className="hover:cursor-pointer w-full font-bold bg-[#001f4d] text-white px-4 py-2 rounded-md mt-4" onClick={() => setSelectedShipment(null)}>Close</button>
                     </div>
                 ) : null
             }

@@ -13,13 +13,13 @@ const SuccessPage = () => {
             return(
                 <main className="h-screen items-center justify-center flex flex-col text-xl font-bold text-yellow-300">
                     <h2>No Quote</h2>
-                    <Link className="bg-yellow-300 text-blue-950 p-2 rounded-md mt-2" to='/quote'>Go back to Form</Link>
+                    <Link className="bg-[#ffb300] text-[#001f4d] p-2 rounded-md mt-2" to='/quote'>Go back to Form</Link>
                 </main>
             );
         }
 
     return <div className="h-screen flex flex-col items-center justify-center">
-        <div className=" text-yellow-300 rounded-md px-15 pt-15 border-3 border-[#0054d1] shadow-[0_0_10px_#0054d1]  w-110 text-center flex flex-col items-center">
+        <div className=" text-[#ffb300] rounded-md px-15 pt-15 border-3 border-[#0054d1] shadow-[0_0_10px_#0054d1]  w-110 text-center flex flex-col items-center">
             <CheckBadgeIcon className="w-40 mb-4"/>
             <h1 className="font-extrabold text-xl mb-2"> Quote Submitted</h1>
             <h2 className="mb-2 mt-2 font-bold">Your quote request has been submitted succesfully.</h2>
@@ -31,8 +31,8 @@ const SuccessPage = () => {
             
         </div>
         <div className="flex justify-between w-120 mt-10 items-center">
-            <Link to='/' className="font-bold text-yellow-300"> ← Back to Dashboard</Link>
-            <Link to='/quote' className="bg-yellow-300 p-2 rounded-lg font-bold text-[#001f4d]">Submit Another Quote</Link>
+            <Link to='/' className="font-bold text-[#ffb300]"> ← Back to Dashboard</Link>
+            <Link to='/quote' className="bg-[#ffb300] p-2 rounded-lg font-bold text-[#001f4d]">Submit Another Quote</Link>
         </div>
         
     </div>

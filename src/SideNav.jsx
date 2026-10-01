@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom'
+import logo from './assets/logo.png'
  
 const SideNav = () => {
-    const activeStyle = "border-l-3 px-1"
-    return <div className= " min-h-screen  border-r border-yellow-300 text-amber-300 font-bold flex flex-col min-w-40  pt-4 pl-4 gap-4">
-        <h2>AVIC</h2>
-        <ul className="flex flex-col">
+    const activeStyle = "bg-blue-100 border-[#ffb300] border-l-4 mr-4 text-center p-2 rounded"
+    return <div className= " bg-linear-to-t from-[#001f4d] to-white text-[#001f4d] min-h-screen  border-r border-yellow-300  font-bold flex flex-col min-w-45  pt-4 pl-4 gap-4">
+        <img className="w-29" src={logo}/>
+        <ul className="flex flex-col gap-4 text-lg mt-4">
             <NavLink className={({isActive}) => `${isActive && activeStyle}`} to='/' >Dashboard</NavLink>
             <NavLink className={({isActive}) => `${isActive && activeStyle}`} to='/quote'>Request Quote</NavLink>
             <NavLink className={({isActive}) => `${isActive && activeStyle}`} to='/shipments'>Shipments</NavLink>

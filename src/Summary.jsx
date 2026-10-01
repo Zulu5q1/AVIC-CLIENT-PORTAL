@@ -34,16 +34,16 @@ const Summary = () => {
 
     if (!location.state) {
         return(
-            <main className="h-screen items-center justify-center flex flex-col text-xl font-bold text-yellow-300">
+            <main className="h-screen items-center justify-center flex flex-col text-xl font-bold bg-[#ffb300]">
                 <h2>No Summary Found</h2>
-                <Link className="bg-yellow-300 text-blue-950 p-2 rounded-md mt-2" to='/quote'>Go back to Form</Link>
+                <Link className="bg-[#ffb300] text-[#001f4d] p-2 rounded-md mt-2" to='/quote'>Go back to Form</Link>
             </main>
         );
     }
 
     return (
         <div className="">
-            <h2 className="text-center text-4xl text-yellow-300 font-bold mt-15 mb-10">Quote Summary</h2>
+            <h2 className="text-center text-4xl text-[#ffb300] font-bold mt-15 mb-10">Quote Summary</h2>
             <div className=" items-center justify-center flex flex-col gap-4">
                 <div className="border bg-white w-200">
                     <img className="w-50 "src={logo}/>
@@ -97,8 +97,8 @@ const Summary = () => {
 
                 </div>
                 <div className="flex justify-around w-full items-center">
-                    <Link to="/quote" state={formData} className="text-center text-white bg-yellow-300 p-2 font-bold rounded-md ">Go back to Form</Link>
-                    <Link to="/success" state={{ Num : ranNum}} className="text-center text-white bg-yellow-300 p-2 font-bold rounded-md ">Submit Quote</Link>
+                    <Link to="/quote" state={formData} className="text-center text-white bg-[#ffb300] p-2 font-bold rounded-md ">Go back to Form</Link>
+                    <Link to="/success" state={{ Num : ranNum}} className="text-center text-white bg-[#ffb300] p-2 font-bold rounded-md ">Submit Quote</Link>
                 </div>
             </div>
             

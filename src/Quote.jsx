@@ -18,38 +18,39 @@ const Quote = () => {
 
     return <div className="flex">
         <SideNav/>
-        <div className="m-4 justify-center flex items-center w-300">
+        <div className="m-4 justify-center flex flex-col items-center w-300">
+            <span className="mb-8 mt-2 text-4xl font-extrabold text-[#ffb300] ">Quote Form</span>
             <form action={handleFormSubmit} className=" w-200 flex flex-col gap-3">
-                <label className=" flex flex-col font-bold text-yellow-300" >
+                <label className=" flex flex-col font-bold text-[#ffb300]" >
                     Full Name:
                     <input required defaultValue={savedData.name  || ""} placeholder="Full Name" name="name" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Company Name:
                     <input required defaultValue={savedData.company  || ""} placeholder="Company (optional)" name="company" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Email:
                     <input required defaultValue={savedData.email  || ""} placeholder="Email" type="email" name="email" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Phone Number:
                     <input required defaultValue={savedData.phone  || ""} placeholder="Phone" type="number" name="phone"  className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Origin:
                     <input required defaultValue={savedData.origin  || ""} placeholder="Origin" name="origin" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Destination:
                     <input required defaultValue={savedData.destination  || ""} placeholder="Destination" name="destination" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Weight:
                     <input required defaultValue={savedData.weight  || ""} placeholder="Weight (kg)" name="weight" type="number" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <div className="flex">
-                    <label className="flex flex-col w-1/2 font-bold text-yellow-300" >
+                    <label className="flex flex-col w-1/2 font-bold text-[#ffb300]" >
                         Shipment Type:
                         <select required defaultValue={savedData.shipment  || ""} className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" name="shipment" >
                             <option value="" disabled>--- Choose a Type ---</option>
@@ -60,7 +61,7 @@ const Quote = () => {
                         </select>
                     </label>
                     
-                    <label className="flex flex-col w-1/2 font-bold text-yellow-300" >
+                    <label className="flex flex-col w-1/2 font-bold text-[#ffb300]" >
                         Service:
                         <select required defaultValue={savedData.service  || ""} className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" name="service" >
                             <option value="" disabled>--- Choose a Service ---</option>
@@ -72,12 +73,12 @@ const Quote = () => {
                     </label>
                 </div>
                 
-                <label className="flex flex-col font-bold text-yellow-300" >
+                <label className="flex flex-col font-bold text-[#ffb300]" >
                     Additional Message:
                     <textarea required defaultValue={savedData.text  || ""} placeholder="Message" name="text" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 
-                <button type="submit" className="bg-yellow-300 p-3 text-blue-950 font-bold text-lg rounded-lg hover:cursor-pointer">Request Quote</button>
+                <button type="submit" className="bg-[#ffb300] p-3 text-blue-950 font-bold text-lg rounded-lg hover:cursor-pointer">Request Quote</button>
             </form>
         </div>
     </div>

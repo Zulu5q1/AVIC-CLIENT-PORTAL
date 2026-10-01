@@ -64,7 +64,7 @@ import { useState } from 'react';
                     <button onClick={() => setButton("Processing")} className={`p-2 ${button === "Processing" ? " text-[#001f4d] bg-[#ffb300]" : "text-[#ffb300] border"} rounded-full px-4 font-medium shadow-sm m-2`}>Processing</button>
                 </div>
                 <form className="min-w-50 bg-blue-900 text-white flex items-center p-2 px-4 rounded-full">
-                    <MagnifyingGlassIcon className=" h-5 w-5 text-yellow-300"/>
+                    <MagnifyingGlassIcon className=" h-5 w-5 text-[#ffb300]"/>
                     <input value={search} onChange={(e) => setSearch(e.target.value)} className=" outline-none  w-full  placeholder:text-white px-2" id="Search" type="text" placeholder="Search..."/>
                     {/* <button type="submit">Search</button> */}
                 </form>

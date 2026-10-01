@@ -15,8 +15,8 @@ const Header = () => {
     
     const trueCount = Notifications.filter((item) => item.unread).length
 
-    return <div className="relative flex justify-between items-center px-4 py-2">
-        <div className=" font-bold text-lg text-blue-900 ">Welcome Back</div>
+    return <div className="bg-white relative flex justify-between items-center px-4 py-2">
+        <div className=" font-bold text-xl text-[#001f4d] ">Welcome Back, Joel</div>
 
         <div  className=" ">
             <div>
