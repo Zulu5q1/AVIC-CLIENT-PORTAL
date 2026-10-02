@@ -6,6 +6,7 @@ import Quote from './Quote.jsx'
 import Summary from './Summary.jsx'
 import SuccessPage from './SuccessPage.jsx';
 import Support from './Support.jsx'
+import Profile from './Profile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
   {
     path: '/support',
     element: <Support/>
+  },
+  {
+    path: '/profile',
+    element: <Profile/>
   },
   {
     path:'*',
