@@ -28,7 +28,7 @@ const Profile= () => {
 
     return <div className="ml-45">
         <SideNav/>
-        <div className=" px-2 bg-linear-to-t from-[#001f4d] to-white  flex flex-col items-center justify-center w-full">
+        <div className=" px-2 bg-linear-to-t from-[#001f4d] to-white  flex flex-col items-center justify-center ">
             <h1 className="mt-5 text-[#001f4d] font-black text-2xl mb-2">PROFILE</h1>
             <div className="mb-5 flex items-center gap-14 px-2  w-full justify-center">
                 <span><UserCircleIcon className="w-25 text-[#001f4d]"/></span>
