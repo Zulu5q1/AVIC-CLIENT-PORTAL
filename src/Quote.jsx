@@ -16,9 +16,9 @@ const Quote = () => {
         navigate('/summary', {state: formFields})
     }
 
-    return <div className="flex">
+    return <div className="ml-45">
         <SideNav/>
-        <div className="m-4 justify-center flex flex-col items-center w-300">
+        <div className="m-4 justify-center flex flex-col items-center ">
             <span className="mb-8 mt-2 text-4xl font-extrabold text-[#ffb300] ">Quote Form</span>
             <form action={handleFormSubmit} className=" w-200 flex flex-col gap-3">
                 <label className=" flex flex-col font-bold text-[#ffb300]" >

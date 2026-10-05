@@ -14,7 +14,7 @@ const Support=() => {
 
     };
 
-    return <div className="flex relative">
+    return <div className="ml-45 relative">
         {
             alert && (
                 <div>
@@ -28,7 +28,7 @@ const Support=() => {
         }
 
         <SideNav/>
-        <div className=" w-full ">
+        <div className=" ">
             <h1 className="text-3xl text-center my-4 text-[#ffb300] font-extrabold ml-6">CUSTOMER SUPPORT</h1>
             <form action={handleSubmit} className="w-full flex justify-center items-center  flex-col  gap-6 ">
                 <div className=" w-[70%] flex flex-col gap-4">

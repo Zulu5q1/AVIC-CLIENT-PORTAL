@@ -19,8 +19,8 @@ const Header = () => {
         <div className=" font-bold text-xl text-[#001f4d] ">Welcome Back, Joel</div>
 
         <div  className=" ">
-            <div>
-                <BellIcon onClick={handleNotify} className=" relative w-9 hover:cursor-pointer text-[#ffb300]"/>
+            <div onClick={handleNotify} className=" hover:cursor-pointer">
+                <BellIcon  className=" relative w-9 text-[#ffb300]"/>
                 {trueCount ? <div className="absolute bg-red-500 top-2 right-5 text-white rounded-full w-4 h-4 text-center flex items-center justify-center text-[11px]">{trueCount}</div> : ""}
             </div>
             

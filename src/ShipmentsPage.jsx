@@ -44,9 +44,9 @@ import { useState } from 'react';
     });
     
 
-    return <div className="flex ">
+    return <div className="ml-45">
         <SideNav/>
-        <div className=" w-full m-6">
+        <div className=" m-6 ">
             <div className=" justify-between flex items-center ">
                 <div className="block md:hidden relative">
                     <AdjustmentsHorizontalIcon onClick={() => setIsOpen(!isOpen)} className="h-10 w-10 text-yellow-300 mr-10"/>
