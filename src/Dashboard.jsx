@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
     const [selectedShipment, setSelectedShipment] = useState(null);
-    return <div className= "flex flex-col gap-4 p-4  bg-linear-to-t from-[#001f4d] to-white">
+    return <div className= "flex flex-col gap-4 p-4  bg-linear-to-t from-[#001f4d] to-white ">
         <div className= "flex gap-4">
             {stats.map((stat, index) => (
                 <StatCard key={index} title={stat.title} value={stat.value} />

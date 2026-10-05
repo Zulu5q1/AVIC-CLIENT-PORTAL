@@ -16,11 +16,11 @@ const Quote = () => {
         navigate('/summary', {state: formFields})
     }
 
-    return <div className="ml-45">
+    return <div className="ml-45 min-w-[320px]">
         <SideNav/>
         <div className="m-4 justify-center flex flex-col items-center ">
             <span className="mb-8 mt-2 text-4xl font-extrabold text-[#ffb300] ">Quote Form</span>
-            <form action={handleFormSubmit} className=" w-200 flex flex-col gap-3">
+            <form action={handleFormSubmit} className="w-full flex flex-col gap-3">
                 <label className=" flex flex-col font-bold text-[#ffb300]" >
                     Full Name:
                     <input required defaultValue={savedData.name  || ""} placeholder="Full Name" name="name" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
@@ -49,7 +49,7 @@ const Quote = () => {
                     Weight:
                     <input required defaultValue={savedData.weight  || ""} placeholder="Weight (kg)" name="weight" type="number" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
-                <div className="flex">
+                <div className="flex ">
                     <label className="flex flex-col w-1/2 font-bold text-[#ffb300]" >
                         Shipment Type:
                         <select required defaultValue={savedData.shipment  || ""} className="bg-white text-blue-950 rounded-lg p-2 mx-1 outline-none" name="shipment" >

@@ -26,11 +26,11 @@ const Profile= () => {
     }
 
 
-    return <div className="ml-45">
+    return <div className="ml-45 min-w-[320px]">
         <SideNav/>
-        <div className=" px-2 bg-linear-to-t from-[#001f4d] to-white  flex flex-col items-center justify-center ">
+        <div className=" px-2 bg-linear-to-t from-[#001f4d] to-white  flex flex-col items-center ">
             <h1 className="mt-5 text-[#001f4d] font-black text-2xl mb-2">PROFILE</h1>
-            <div className="mb-5 flex items-center gap-14 px-2  w-full justify-center">
+            <div className="mb-5 gap-10 flex items-center px-2  justify-center">
                 <span><UserCircleIcon className="w-25 text-[#001f4d]"/></span>
                 <div className="text-[#001f4d]">
                     <h1 className="font-extrabold">{name}</h1>
@@ -38,11 +38,13 @@ const Profile= () => {
                     <p className="font-bold text-[#ffb300]">{status}</p>
                 </div>
                 <button className="p-2 bg-[#001f4d] text-[#ffb300] font-bold rounded-md cursor-pointer" onClick={() => setEdit(false)}>Edit</button>
+                
             </div>
-            <hr className="w-full border text-[#ffb300] rounded-full"/>
+            
             <form action={handleSubmit}>
+                <hr className=" border text-[#ffb300] rounded-full "/>
                 <h1 className="mt-2 font-black text-lg text-[#001f4d] ">Personal Information</h1>
-                <div className=" w-full flex  gap-1 mt-2 flex-wrap">
+                <div className="flex  gap-1 mt-2 flex-wrap">
                     <div className=" grow ">
                         <div className="m-2 bg-[#001f4d] p-2 rounded-lg ">
                             <h1 className="text-[#ffb300] font-extrabold">Full Name</h1>
