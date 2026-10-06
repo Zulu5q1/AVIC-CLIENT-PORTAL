@@ -1,6 +1,5 @@
 import { UserCircleIcon } from "@heroicons/react/20/solid";
 import { useState } from 'react'
-import SideNav from './SideNav.jsx'
 import { stats, Shipments } from "./data/MockData.js";
 
 
@@ -26,8 +25,7 @@ const Profile= () => {
     }
 
 
-    return <div className="ml-45 min-w-[320px]">
-        <SideNav/>
+    return <div className="min-w-[320px]">
         <div className=" px-2 bg-linear-to-t from-[#001f4d] to-white  flex flex-col items-center ">
             <h1 className="mt-5 text-[#001f4d] font-black text-2xl mb-2">PROFILE</h1>
             <div className="mb-5 gap-10 flex items-center px-2  justify-center">

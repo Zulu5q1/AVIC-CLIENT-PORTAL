@@ -1,4 +1,4 @@
-import SideNav from './SideNav.jsx'
+
 import { useState } from 'react'
 
 const Support=() => {
@@ -14,7 +14,7 @@ const Support=() => {
 
     };
 
-    return <div className="ml-45 relative">
+    return <div className=" relative">
         {
             alert && (
                 <div>
@@ -27,7 +27,6 @@ const Support=() => {
             )
         }
 
-        <SideNav/>
         <div className=" ">
             <h1 className="text-3xl text-center my-4 text-[#ffb300] font-extrabold ml-6">CUSTOMER SUPPORT</h1>
             <form action={handleSubmit} className="w-full flex justify-center items-center  flex-col  gap-6 ">

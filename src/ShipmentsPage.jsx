@@ -1,4 +1,4 @@
-import SideNav from './SideNav';
+
 import  {ShipmentCard}  from './components/ShipmentCard';
 import  {Shipments}  from './data/MockData';
 import { MagnifyingGlassIcon, AdjustmentsHorizontalIcon } from '@heroicons/react/20/solid';
@@ -44,8 +44,8 @@ import { useState } from 'react';
     });
     
 
-    return <div className="ml-45">
-        <SideNav/>
+    return <div className="">
+        
         <div className="min-w-[320px] m-6 ">
             <div className=" justify-between flex items-center ">
                 <div className="block md:hidden relative">

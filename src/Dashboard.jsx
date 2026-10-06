@@ -23,7 +23,7 @@ const Dashboard = () => {
                         onClick={() => setSelectedShipment(shipment)} />
                     </div>
                 ))}
-                <Link to='/shipments' className="text-[#ffb300] underline text-right w-full">View Full Shipments</Link>
+                <Link to='/shipments' className="text-[#ffb300] underline text-right ">View Full Shipments</Link>
             </div>
             {
                 selectedShipment && selectedShipment != null ? (

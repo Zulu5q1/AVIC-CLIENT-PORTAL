@@ -1,4 +1,4 @@
-import SideNav from "./SideNav";
+
 import { useNavigate, useLocation } from "react-router-dom";
 
 
@@ -16,8 +16,8 @@ const Quote = () => {
         navigate('/summary', {state: formFields})
     }
 
-    return <div className="ml-45 min-w-[320px]">
-        <SideNav/>
+    return <div className="min-w-[320px]">
+        
         <div className="m-4 justify-center flex flex-col items-center ">
             <span className="mb-8 mt-2 text-4xl font-extrabold text-[#ffb300] ">Quote Form</span>
             <form action={handleFormSubmit} className="w-full flex flex-col gap-3">
