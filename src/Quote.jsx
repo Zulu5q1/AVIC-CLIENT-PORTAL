@@ -1,13 +1,19 @@
 
 import { useNavigate, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 
 const Quote = () => {
     const navigate = useNavigate();
+    const [text, setText] = useState("");
 
     const location = useLocation();
 
     const savedData = location.state || {};
+
+    const handleChange = (event) => {
+        setText(event.target.value);
+    }
 
     const handleFormSubmit = (formData) => {
         //gather data
@@ -35,7 +41,7 @@ const Quote = () => {
                 </label>
                 <label className="flex flex-col font-bold text-[#ffb300]" >
                     Phone Number:
-                    <input required defaultValue={savedData.phone  || ""} placeholder="Phone" type="number" name="phone"  className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input required maxLength={10} defaultValue={savedData.phone  || ""} placeholder="Phone" type="tel" name="phone"  className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <label className="flex flex-col font-bold text-[#ffb300]" >
                     Origin:
@@ -47,7 +53,7 @@ const Quote = () => {
                 </label>
                 <label className="flex flex-col font-bold text-[#ffb300]" >
                     Weight:
-                    <input required defaultValue={savedData.weight  || ""} placeholder="Weight (kg)" name="weight" type="number" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <input required maxLength={4} defaultValue={savedData.weight  || ""} placeholder="Weight (kg)" name="weight" type="tel" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
                 </label>
                 <div className="flex ">
                     <label className="flex flex-col w-1/2 font-bold text-[#ffb300]" >
@@ -75,7 +81,8 @@ const Quote = () => {
                 
                 <label className="flex flex-col font-bold text-[#ffb300]" >
                     Additional Message:
-                    <textarea required defaultValue={savedData.text  || ""} placeholder="Message" name="text" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <textarea maxLength={100} onChange={handleChange} required defaultValue={savedData.text  || ""} placeholder="Message" name="text" className="bg-white shadow-md text-blue-950 p-2 rounded-lg my-2 outline-none" />
+                    <p>{text.length}/100</p>
                 </label>
                 
                 <button type="submit" className="bg-[#ffb300] p-3 text-blue-950 font-bold text-lg rounded-lg hover:cursor-pointer">Request Quote</button>

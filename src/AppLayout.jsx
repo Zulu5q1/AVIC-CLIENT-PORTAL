@@ -6,13 +6,13 @@ import { Outlet } from 'react-router-dom';
 
 const AppLayout = () => {
     return (
-        <>
+        <div className="flex">
             <SideNav/>
-            <div className="ml-45 min-w-100">
+            <div className="ml-45 flex-1">
                 <Header/>
                 <Outlet/>
             </div>
-        </>
+        </div>
     )
 };
 
